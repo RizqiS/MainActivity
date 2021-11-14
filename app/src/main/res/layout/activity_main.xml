@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/first"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/topimage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/image1" />
+    <TextView
+        android:id="@+id/logintxt"
+        android:layout_below="@+id/topimage"
+        android:layout_marginTop="-40dp"
+        android:layout_marginStart="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Login"
+        android:textColor="@color/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/username"
+        android:layout_below="@+id/logintxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopStart="15dp">
+        <EditText
+            android:id="@+id/editusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="Users" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/passwordtxt"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Password"
+        android:textColor="@color/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_below="@+id/passwordtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopStart="15dp">
+        <EditText
+            android:id="@+id/editpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:focusable="false"
+            android:hint="Password"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnlogin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:padding="15dp"
+        android:layout_below="@id/password"
+        android:backgroundTint="@color/second"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="20dp"/>
+
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password ?"
+        android:textColor="@color/second"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnlogin"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_below="@+id/forgotpassword"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Dont have an Account ? "
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrasi"
+            android:textSize="14sp"
+            android:textColor="@color/second"/>
+    </LinearLayout>
+
+</RelativeLayout>
